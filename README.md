@@ -92,6 +92,15 @@ The project follows a hierarchical class structure:
 
 This project was developed to demonstrate proficiency in **Java Software Development** and **Object-Oriented Design Patterns**.
 
-* **Canberk** (Software Architecture & Implementation)
+* **Canberk** 
 
 ---
+
+## 🚀 How to Run
+Clone this repository.
+
+Compile: javac src/*.java
+
+Run GUI: java -cp src MainFrame
+
+Run Console: java -cp src ConsoleApp
