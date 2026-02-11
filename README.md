@@ -8,7 +8,7 @@ This project demonstrates a comprehensive software engineering approach to perso
 
 ## 📖 Project Overview & Goal
 
-The primary goal of this project is to implement a scalable and maintainable software solution for tracking personal finances. It addresses the need for real-time budget monitoring and categorized expense logging.
+The primary goal of this project is to implement a scalable and maintainable software solution for tracking personal finances. It addresses the need for dynamic budget monitoring and categorized expense logging.
 
 We designed a complete system using:
 * **Java SE (JDK 17+)**
