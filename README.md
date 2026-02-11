@@ -16,18 +16,19 @@ An advanced **Expense Tracking Application** built with **Java**. This project d
 ### 1. User Initialization & GUI
 Users start by entering their name and monthly budget goal. The dashboard provides a visual summary.
 
-![User Login](Images/login.png)
-![Dashboard](Images/dashboard.png)
+<img src="Images/login.png" width="500">
+<br><br>
+<img src="Images/dashboard.png" width="700">
 
 ### 2. Adding Expenses
 An intuitive form to input category, description, amount, and date.
 
-![Add Expense](Images/add_expense.png)
+<img src="Images/add_expense.png" width="600">
 
 ### 3. Console / Terminal Output
 The project allows testing the core logic via command line, demonstrating robust data handling without the GUI.
 
-![Console Output](Images/console.png)
+<img src="Images/console.png" width="700">
 
 ---
 
