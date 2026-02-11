@@ -71,6 +71,7 @@ A robust Command Line Interface (CLI) for power users, demonstrating the core ba
 * **`User.java`**: The core data model managing the budget baseline and calculations.
 * **`DataManager.java`**: Utility class for binary file operations.
 * **`Expense.java`**: Abstract base class enforcing the polymorphic contract.
+* **`ConsoleApp.java`**: A robust, terminal-based interface for headless operations.
 
 ---
 
