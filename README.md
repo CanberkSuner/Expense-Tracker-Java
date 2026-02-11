@@ -1,39 +1,53 @@
-# 💰 Expense Tracker (Harcama Takip Sistemi)
+# 💰 Expense Tracker (Java GUI & Console)
 
-Bu proje, **Java** kullanılarak geliştirilmiş, Nesne Yönelimli Programlama (OOP) prensiplerini temel alan terminal tabanlı bir harcama takip uygulamasıdır. Kullanıcıların aylık bütçelerini belirlemelerine, harcamalarını kategorize etmelerine ve kalan bakiyelerini anlık olarak görmelerine olanak tanır.
+An advanced **Expense Tracking Application** built with **Java**. This project demonstrates strong Object-Oriented Programming (OOP) principles. It offers both a **Graphical User Interface (Swing)** for end-users and a **Console Interface** to demonstrate the core backend logic.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-* **Bütçe Yönetimi:** Kullanıcıdan aylık bütçe bilgisini alır ve yönetir.
-* **Harcama Kategorileri:** Yiyecek (Food), Ulaşım (Transport) ve Fatura (Bill) gibi farklı kategorilerde harcama girişi.
-* **Harcama Özeti:** Girilen tüm harcamaların tarih, tutar ve açıklama detaylarıyla listelenmesi.
-* **Bakiye Takibi:** Toplam harcanan tutarı ve kalan bütçeyi otomatik hesaplama.
-* **Hata Kontrolü:** Negatif sayı girişi veya hatalı tarih formatlarına karşı kullanıcı dostu hata yönetimi.
+* **Dual Interface:** Run as a desktop GUI app or strictly via Terminal/Console.
+* **Smart Budget Tracking:** Real-time calculation of "Total Spent" and "Remaining Budget".
+* **Categorized Logging:** Add expenses under specific categories (Food, Transport, Bill).
+* **OOP Design:** Utilizes Inheritance, Polymorphism, Abstraction, and Encapsulation.
+* **Filtering System:** (GUI Mode) Filter the expense list by category tabs.
+* **Data Validation:** Prevents negative inputs and ensures correct date formatting.
 
-## 🛠 Kullanılan Teknolojiler ve OOP Kavramları
+## 📸 Screenshots
 
-Bu projede aşağıdaki OOP prensipleri aktif olarak kullanılmıştır:
+### 1. User Initialization & GUI
+Users start by entering their name and monthly budget goal. The dashboard provides a visual summary.
 
-* **Kalıtım (Inheritance):** `FoodExpense`, `TransportExpense` ve `BillExpense` sınıfları, temel `Expense` sınıfından türetilmiştir. Bu sayede kod tekrarı önlenmiştir.
-* **Soyutlama (Abstraction):** `Expense` sınıfı soyut (abstract) olarak tanımlanmış ve `getCategory()` metodu alt sınıflar tarafından özelleştirilmiştir.
-* **Kapsülleme (Encapsulation):** Kullanıcı ve harcama verileri (description, amount vb.) sınıf içinde korunmuş, erişimler metotlar üzerinden sağlanmıştır.
-* **Çok Biçimlilik (Polymorphism):** Harcamalar `List<Expense>` içerisinde tutulur, ancak çalışma zamanında her nesne kendi sınıfına özgü davranışı sergiler.
+![User Login](screenshots/login.png)
+![Dashboard](screenshots/dashboard.png)
 
-## 📂 Sınıf Yapısı (Class Structure)
+### 2. Adding Expenses
+An intuitive form to input category, description, amount, and date.
 
-* **ExpenseTracker:** `main` metodunu içerir, kullanıcı etkileşimini yönetir.
-* **User:** Kullanıcı bilgilerini ve harcama listesini tutar.
-* **Expense (Abstract):** Tüm harcama türleri için temel sınıf.
-    * `FoodExpense`
-    * `TransportExpense`
-    * `BillExpense`
+![Add Expense](screenshots/add_expense.png)
 
-## screen Ekran Görüntüleri
+### 3. Console / Terminal Output
+The project allows testing the core logic via command line, demonstrating robust data handling without the GUI.
 
-_(Buraya raporundaki ekran görüntülerinden birini ekleyebilirsin, örneğin sequence screenshot)_
+![Console Output](screenshots/console.png)
 
-## 💻 Kurulum ve Çalıştırma
+---
 
-1. Projeyi bilgisayarınıza indirin:
-   ```bash
-   git clone [https://github.com/KULLANICI_ADIN/ExpenseTracker.git](https://github.com/KULLANICI_ADIN/ExpenseTracker.git)
+## 🛠 Tech Stack & OOP Concepts
+
+* **Language:** Java (JDK 17+)
+* **GUI:** Java Swing (JFrame, JPanel)
+* **Polymorphism:** The application treats different expense types (`FoodExpense`, `TransportExpense`) uniformly.
+* **Inheritance:** All specific expense classes inherit from the abstract base class `Expense`.
+* **Abstraction:** The `Expense` class defines the contract (`getCategory`) that all subclasses must implement.
+
+## 📂 Project Structure
+
+```text
+src/
+├── MainFrame.java        # Entry point for the GUI version
+├── ExpenseTracker.java   # Entry point for the Console version
+├── ExpenseForm.java      # Form logic for adding expenses (GUI)
+├── User.java             # Manages user data and budget calculations
+├── Expense.java          # Abstract base class
+├── FoodExpense.java      # Concrete subclass
+├── TransportExpense.java # Concrete subclass
+└── BillExpense.java      # Concrete subclass
