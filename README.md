@@ -97,10 +97,7 @@ This project was developed to demonstrate proficiency in **Java Software Develop
 ---
 
 ## 🚀 How to Run
-Clone this repository.
-
-Compile: javac src/*.java
-
-Run GUI: java -cp src MainFrame
-
-Run Console: java -cp src ConsoleApp
+1. Clone this repository.
+2. Compile: javac src/*.java
+3. Run GUI: java -cp src MainFrame
+4. Run Console: java -cp src ConsoleApp
