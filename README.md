@@ -1,103 +1,98 @@
-# 💰 Expense Tracker System (Java & OOP)
+# 💰 Professional Expense Tracker System (Java & OOP)
 
-**A robust Expense Tracking System developed using Java Swing and Advanced Object-Oriented Programming principles.**
+**A high-performance financial management application featuring a dual-interface design, polymorphic data architecture, and dynamic budget security.**
 
-This project demonstrates a comprehensive software engineering approach to personal finance management. It features a dual-interface design (GUI & Console) and utilizes a polymorphic architecture to handle various expense categories dynamically.
+This project is a complete software solution for personal finance, built with **Java SE** and **Swing**. It combines advanced Object-Oriented Programming (OOP) principles with a user-centric design to provide a robust experience for tracking expenses and managing budgets.
 
 ---
 
-## 📖 Project Overview & Goal
+## 🚀 Key Engineering Features
 
-The primary goal of this project is to implement a scalable and maintainable software solution for tracking personal finances. It addresses the need for dynamic budget monitoring and categorized expense logging.
-
-We designed a complete system using:
-* **Java SE (JDK 17+)**
-* **Java Swing** (for the Graphical User Interface)
-* **OOP Principles** (Inheritance, Polymorphism, Abstraction)
-* **Event-Driven Programming** (Action Listeners & Dynamic Updates)
+* **Dynamic Budget Guard:** An event-driven security layer that prevents users from logging expenses exceeding their current available balance at the time of entry.
+* **Baseline-Shift Logic:** Features a "Budget Baseline" system, allowing users to start fresh financial periods without losing their historical data.
+* **Object Serialization:** Implements permanent data storage. User profiles and expense histories are saved as binary `.dat` files, ensuring no data loss between sessions.
+* **Polymorphic Architecture:** Uses a single abstract contract to manage diverse expense types (`Food`, `Transport`, `Bill`) dynamically at runtime.
+* **Robust Input Validation:** Every user entry is guarded by `try-catch` blocks and loop-based validation to ensure "crash-proof" operation.
 
 ---
 
 ## ⚙️ System Architecture & Engineering Decisions
 
-### 1. Polymorphic Data Structure
-The core of our design is the use of **Polymorphism** to manage data. Instead of creating separate lists for each category, the system uses a single abstract reference list.
-* **Implementation:** `List<Expense> expenses`
-* **Why Polymorphism?** This allows the system to treat `FoodExpense`, `TransportExpense`, and `BillExpense` objects uniformly at runtime. It significantly **reduces code duplication** and makes adding new categories (e.g., "HealthExpense") effortless without breaking existing code.
+### 1. Data Persistence Layer (`DataManager.java`)
+The system utilizes **Java Object Serialization**. This avoids the need for a complex database while maintaining full persistence across application restarts.
+* **Logic:** Converts `User` and `Expense` objects into byte streams for binary file I/O operations.
 
-### 2. Abstract Base Architecture
-We defined a strict contract using an **Abstract Base Class (`Expense`)**.
-* It enforces that every subclass *must* implement the `getCategory()` method.
-* This ensures data consistency across the entire application, preventing "undefined" expense types.
-
-### 3. Expense Logic & Categorization Table
-The system categorizes inputs based on specific subclasses. Here is the logic table:
-
-| Class Name | Category Tag | Description Logic | Usage Example |
-| :--- | :--- | :--- | :--- |
-| **FoodExpense** | `Food` | Daily consumables | Lunch, Groceries, Dining out |
-| **TransportExpense** | `Transport` | Commuting costs | Bus Ticket, Gas, Taxi |
-| **BillExpense** | `Bill` | Recurring payments | Electricity, Water, Internet |
-
-### 4. Dynamic GUI Rendering (Swing)
-Instead of a static form, the **GUI (MainFrame)** uses a dynamic update mechanism.
-* **Observer-like Pattern:** When a user adds an expense, the `User` object updates the underlying data model, and the `JTabbedPane` and `Header Panel` (Budget Status) repaint themselves instantly to reflect the new "Remaining Budget".
-
----
-
-## 🔋 Operational Modes
-
-The system supports two distinct modes of operation to demonstrate flexibility:
-
-| Mode | Interface Type | Description |
-| :--- | :--- | :--- |
-| **Desktop Mode** | **GUI (Swing)** | Full graphical experience with forms, drop-downs, and visual dashboards. Best for end-users. |
-| **Headless Mode** | **Console/Terminal** | Text-based interface running in the command line. Demonstrates the raw backend logic and data processing speed. |
+### 2. Dynamic Calculation Formula
+The application calculates the remaining budget using an offset-based logic:
+$$Remaining = NewBudget - (TotalSpent_{Current} - TotalSpent_{AtUpdate})$$
+This ensures the system handles budget updates seamlessly while maintaining historical accuracy in the transaction list.
 
 ---
 
 ## 📸 Interface Demonstration
 
-### 1. User Initialization
-The entry point where the user establishes their financial baseline.
-<br>
-<img src="Images/login.png" width="450" alt="User Login Screen">
+### 1. User Initialization & Smart Info System
+The entry point allows users to authenticate and configure their financial baseline. It includes an interactive **(i)** icon that provides localized English guidance on budget management logic.
 
-### 2. Dashboard & Data Entry
-The main control center. The top panel updates the budget in real-time, while the form validates inputs (preventing negative numbers).
-<br>
-<p float="left">
-  <img src="Images/dashboard.png" width="500" alt="Dashboard View">
-</p>
+| Initial Setup | Interactive Information |
+| :--- | :--- |
+| ![Login](login.png) | ![Info Button](Info_Button.png) |
 
-### 3. Backend Logic (Console Output)
-Proof of the robust backend calculation and polymorphic `toString()` behavior.
-<br>
-<img src="Images/console.png" width="600" alt="Console Output">
+### 2. Professional Dashboard
+The main control center features a live-update status header and a tabbed view to filter expenses by category instantly.
+
+![Primary Dashboard](dashboard.png)
+
+### 3. Dynamic Financial Monitoring
+The dashboard's header panel repaints itself after every transaction, providing an immediate comparison between **Total Spent** and **Remaining Budget**.
+
+![Advanced Monitoring](Current_budget_dashboard.png)
+
+### 4. Headless Mode (Console Application)
+A robust Command Line Interface (CLI) for power users, demonstrating the core backend logic and data processing efficiency without the GUI overhead.
+
+![Console Mode](console.png)
 
 ---
 
-## 🔌 Class Diagram & Logic Mapping
+## 📊 Logic & Categorization Mapping
 
-The project follows a hierarchical class structure:
+| Class | Category | Usage Logic | Validation |
+| :--- | :--- | :--- | :--- |
+| `FoodExpense` | **Food** | Daily groceries and dining | Category lock / Amount check |
+| `TransportExpense`| **Transport** | Fuel, tickets, and taxi costs | Category lock / Amount check |
+| `BillExpense` | **Bill** | Recurring monthly payments | Category lock / Amount check |
 
-* **Main Control:** `MainFrame.java` (GUI) / `ExpenseTracker.java` (Console)
-* **Data Model:** `User.java` (Holds `List<Expense>` and `budget`)
-* **Abstract Layer:** `Expense.java` (Base fields: amount, date, description)
-* **Concrete Layers:** `FoodExpense`, `TransportExpense`, `BillExpense`
+---
+
+## 🔌 Project Structure
+* **`MainFrame.java`**: Handles GUI initialization and theme management.
+* **`ExpenseForm.java`**: The primary UI containing input security and dynamic list rendering.
+* **`User.java`**: The core data model managing the budget baseline and calculations.
+* **`DataManager.java`**: Utility class for binary file operations.
+* **`Expense.java`**: Abstract base class enforcing the polymorphic contract.
 
 ---
 
 ## 👤 Developer
-
-This project was developed to demonstrate proficiency in **Java Software Development** and **Object-Oriented Design Patterns**.
-
-* **Canberk** 
+**Canberk** - 
 
 ---
 
 ## 🚀 How to Run
-1. Clone this repository.
-2. Compile: javac src/*.java
-3. Run GUI: java -cp src MainFrame
-4. Run Console: java -cp src ConsoleApp
+
+1.  **Clone the repository.**
+2.  **Ensure JDK 21+ is installed.**
+3.  **Compile all files:**
+    ```bash
+    javac -d out src/*.java
+    ```
+4.  **Run Desktop Mode (GUI):**
+    ```bash
+    java -cp out MainFrame
+    ```
+5.  **Run Basic Mode (Console):**
+    ```bash
+    java -cp out ConsoleApp
+    ```
+    *(Use this for a fast, terminal-based experience without a graphical interface.)*
