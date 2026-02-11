@@ -68,7 +68,6 @@ The main control center. The top panel updates the budget in real-time, while th
 <br>
 <p float="left">
   <img src="Images/dashboard.png" width="500" alt="Dashboard View">
-  <img src="Images/add_expense.png" width="350" alt="Add Expense Form">
 </p>
 
 ### 3. Backend Logic (Console Output)
