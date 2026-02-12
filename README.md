@@ -1,18 +1,18 @@
 # 💰 Expense Tracker System (Java & OOP)
 
-**A high-performance financial management application featuring a dual-interface design, polymorphic data architecture, and dynamic budget security.**
+**A desktop-based financial management application featuring a dual-interface design, polymorphic data architecture, and dynamic budget security.**
 
-This project is a complete software solution for personal finance, built with **Java SE** and **Swing**. It combines advanced Object-Oriented Programming (OOP) principles with a user-centric design to provide a robust experience for tracking expenses and managing budgets.
+This project is a desktop-based personal finance management application, built with **Java SE** and **Swing**. It combines advanced Object-Oriented Programming (OOP) principles with a user-centric design to provide a robust experience for tracking expenses and managing budgets.
 
 ---
 
 ## 🚀 Key Engineering Features
 
-* **Dynamic Budget Guard:** An event-driven security layer that prevents users from logging expenses exceeding their current available balance at the time of entry.
+* **Dynamic Budget Control:** A validation layer that prevents users from logging expenses exceeding their current available balance at the time of entry.
 * **Baseline-Shift Logic:** Features a "Budget Baseline" system, allowing users to start fresh financial periods without losing their historical data.
 * **Object Serialization:** Implements permanent data storage. User profiles and expense histories are saved as binary `.dat` files, ensuring no data loss between sessions.
 * **Polymorphic Architecture:** Uses a single abstract contract to manage diverse expense types (`Food`, `Transport`, `Bill`) dynamically at runtime.
-* **Robust Input Validation:** Every user entry is guarded by `try-catch` blocks and loop-based validation to ensure "crash-proof" operation.
+* **Robust Input Validation:** Every user entry is guarded by `try-catch` blocks and loop-based validation to ensure stable runtime behavior.
 
 ---
 
