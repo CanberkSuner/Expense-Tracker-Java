@@ -41,17 +41,23 @@ The entry point allows users to authenticate and configure their financial basel
 ### 2. Professional Dashboard
 The main control center features a live-update status header and a tabbed view to filter expenses by category instantly.
 
-![Primary Dashboard](Images/dashboard.png)
+<p align="center">
+  <img src="Images/dashboard.png" width="600" title="Primary Dashboard">
+</p>
 
 ### 3. Dynamic Financial Monitoring
 The dashboard's header panel dynamically repaints after every transaction, providing an immediate comparison between **Total Spent** and **Remaining Budget**.
 
-![Advanced Monitoring](Images/Current_budget_dashboard.png)
+<p align="center">
+  <img src="Images/Current_budget_dashboard.png" width="500" title="Advanced Monitoring">
+</p>
 
 ### 4. Headless Mode (Console Application)
 A robust Command Line Interface (CLI) for power users, demonstrating the core backend logic and data processing efficiency without the GUI overhead.
 
-![Console Mode](Images/console.png)
+<p align="center">
+  <img src="Images/console.png" width="550" title="Console Mode">
+</p>
 
 ---
 
