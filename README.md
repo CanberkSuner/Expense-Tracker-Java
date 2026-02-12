@@ -98,11 +98,22 @@ A robust Command Line Interface (CLI) for power users, demonstrating the core ba
     ```
     *(Use this for a fast, terminal-based experience without a graphical interface.)*
 
+---
+
 ### 📥 Download Section
 
 To get the latest version of the application, click the button below:
 
 [![Download JAR](https://img.shields.io/badge/Download-ExpenseTracker.jar-success?style=for-the-badge&logo=java)](https://github.com/CanberkSuner/Expense-Tracker-Java/raw/main/ExpenseTracker.jar)
 
-> [!NOTE]
-> If the application doesn't open by double-clicking, it's likely a Windows file association issue. Please use the **Terminal (CMD)** command: `java -jar ExpenseTracker.jar`.
+> [!TIP]
+> **Windows Security Note:** If you see an "Unable to access jarfile" error, right-click the file -> **Properties** -> Check **"Unblock"** and click Apply.
+
+---
+
+## 🛡️ Security & Trust
+We prioritize user safety. This application is transparent and verified:
+* **Open Source:** You can inspect the full source code in the `src/` folder.
+* **VirusTotal Verified:** 0/64 security vendors flagged this file as malicious.
+* **Scan Report:** [View Official VirusTotal Result](https://www.virustotal.com/gui/file/c8914f0bf6167adbeabc13a2dcef0ac55ffcd069889c94bb58e4f756cbc3fe7e?nocache=1)
+
