@@ -6,7 +6,7 @@ public class User implements Serializable {
     private String name;
     private double monthlyBudget;
     private List<Expense> expenses;
-    private double spentAtUpdate = 0; // Bütçe yenilendiğindeki ofset
+    private double spentAtUpdate = 0; 
 
     public User(String name, double monthlyBudget) {
         this.name = name;
@@ -56,4 +56,5 @@ public class User implements Serializable {
 
     public String getName() { return name; }
     public List<Expense> getExpenses() { return expenses; }
+
 }
