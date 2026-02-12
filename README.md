@@ -1,4 +1,4 @@
-# 💰 Professional Expense Tracker System (Java & OOP)
+# 💰 Expense Tracker System (Java & OOP)
 
 **A high-performance financial management application featuring a dual-interface design, polymorphic data architecture, and dynamic budget security.**
 
@@ -97,3 +97,12 @@ A robust Command Line Interface (CLI) for power users, demonstrating the core ba
     java -cp out ConsoleApp
     ```
     *(Use this for a fast, terminal-based experience without a graphical interface.)*
+
+### 📥 Download Section
+
+To get the latest version of the application, click the button below:
+
+[![Download JAR](https://img.shields.io/badge/Download-ExpenseTracker.jar-success?style=for-the-badge&logo=java)](https://github.com/CanberkSuner/Expense-Tracker-Java/raw/main/ExpenseTracker.jar)
+
+> [!NOTE]
+> If the application doesn't open by double-clicking, it's likely a Windows file association issue. Please use the **Terminal (CMD)** command: `java -jar ExpenseTracker.jar`.
