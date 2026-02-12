@@ -108,7 +108,7 @@ To get the latest version of the application, click the button below:
 
 > [!TIP]
 > **Windows Security Note:** If you see an "Unable to access jarfile" error, right-click the file -> **Properties** -> Check **"Unblock"** and click Apply.
-
+> **Recommendation:** Create a new folder (e.g., `My Budget App`) on your desktop and move the `ExpenseTracker.jar` file inside it before running. This keeps your data organized and portable!
 ---
 
 ## 🛡️ Security & Trust
