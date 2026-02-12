@@ -12,7 +12,7 @@ This project is a desktop-based personal finance management application, built w
 * **Baseline-Shift Logic:** Features a "Budget Baseline" system, allowing users to start fresh financial periods without losing their historical data.
 * **Object Serialization:** Implements permanent data storage. User profiles and expense histories are saved as binary `.dat` files, ensuring no data loss between sessions.
 * **Polymorphic Architecture:** Uses a single abstract contract to manage diverse expense types (`Food`, `Transport`, `Bill`) dynamically at runtime.
-* **Robust Input Validation:** Every user entry is guarded by `try-catch` blocks and loop-based validation to ensure stable runtime behavior.
+* **Robust Input Validation:** Every user entry is guarded by `try-catch` blocks and loop-based validation to ensure stable runtime behavior..
 
 ---
 
